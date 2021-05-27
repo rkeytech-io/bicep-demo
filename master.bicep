@@ -16,5 +16,6 @@ module demo '01-Basics/demo.bicep' = {
   scope: rg
   params: {
     globalRedundancy: false
+    demoId: demoId
   }
 }

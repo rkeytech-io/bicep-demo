@@ -1,6 +1,7 @@
 // Parameters + Default Value + Expressions
 param globalRedundancy bool
 param location string = resourceGroup().location
+param demoId string = 'bicep'
 
 // Variable + Expressions
 var containerNames = [
@@ -9,7 +10,7 @@ var containerNames = [
   'pdf'
 ]
 
-var storageAccountName = uniqueString(resourceGroup().id)
+var storageAccountName = '${demoId}${uniqueString(resourceGroup().id)}'
 
 // Resource
 resource sa 'Microsoft.Storage/storageAccounts@2021-02-01' = {
