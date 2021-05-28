@@ -1,7 +1,7 @@
 // Scope
 targetScope = 'subscription'
 
-var demoPrefix = 'bicep-demo'
+var demoPrefix = 'bicepdemo'
 param currentTime string = utcNow()
 var demoId = '${demoPrefix}-${uniqueString(subscription().subscriptionId)}-${currentTime}'
 
@@ -16,6 +16,6 @@ module demo '01-Basics/demo.bicep' = {
   scope: rg
   params: {
     globalRedundancy: false
-    demoId: demoId
+    demoId: demoPrefix
   }
 }
