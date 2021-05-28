@@ -1,7 +1,7 @@
 // Scope
 targetScope = 'subscription'
 
-var demoPrefix = 'bicepdemo'
+var demoPrefix = 'back2base'
 param currentTime string = utcNow()
 var demoId = '${demoPrefix}-${uniqueString(subscription().subscriptionId)}-${currentTime}'
 
